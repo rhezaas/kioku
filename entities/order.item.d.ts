@@ -1,6 +1,6 @@
-import { EntityModel } from 'models';
-import { OrderItemInterface } from 'interfaces';
-import { OrderEntity, ItemEntity } from 'entities';
+import { EntityModel } from '../models';
+import { OrderItemInterface } from '../interfaces';
+import { OrderEntity, ItemEntity } from '.';
 export declare class OrderItemEntity extends EntityModel implements OrderItemInterface {
     static entity: {
         schema: string;

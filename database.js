@@ -36,9 +36,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var Entities = require("entities");
+var Entities = require("./entities");
 var typeorm_1 = require("typeorm");
-var tools_1 = require("tools");
+var tools_1 = require("./tools");
 var Database = (function () {
     function Database() {
         this.initialize();

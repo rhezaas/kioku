@@ -22,9 +22,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var models_1 = require("models");
+var models_1 = require("../models");
 var typeorm_1 = require("typeorm");
-var entities_1 = require("entities");
+var _1 = require(".");
 var CategoryEntity = (function (_super) {
     __extends(CategoryEntity, _super);
     function CategoryEntity() {
@@ -45,7 +45,7 @@ var CategoryEntity = (function (_super) {
         __metadata("design:type", String)
     ], CategoryEntity.prototype, "name", void 0);
     __decorate([
-        typeorm_1.OneToMany(function () { return entities_1.ItemEntity; }, function (items) { return items.category; }),
+        typeorm_1.OneToMany(function () { return _1.ItemEntity; }, function (items) { return items.category; }),
         __metadata("design:type", Array)
     ], CategoryEntity.prototype, "items", void 0);
     return CategoryEntity;

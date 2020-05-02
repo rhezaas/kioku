@@ -22,9 +22,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var models_1 = require("models");
+var models_1 = require("../models");
 var typeorm_1 = require("typeorm");
-var entities_1 = require("entities");
+var _1 = require(".");
 var UserRoleEntity = (function (_super) {
     __extends(UserRoleEntity, _super);
     function UserRoleEntity() {
@@ -47,11 +47,11 @@ var UserRoleEntity = (function (_super) {
         __metadata("design:type", String)
     ], UserRoleEntity.prototype, "role", void 0);
     __decorate([
-        typeorm_1.ManyToOne(function () { return entities_1.UserEntity; }, function (user) { return user.roles; }),
+        typeorm_1.ManyToOne(function () { return _1.UserEntity; }, function (user) { return user.roles; }),
         typeorm_1.JoinColumn({
             name: 'user_id'
         }),
-        __metadata("design:type", entities_1.UserEntity)
+        __metadata("design:type", _1.UserEntity)
     ], UserRoleEntity.prototype, "user", void 0);
     return UserRoleEntity;
 }(models_1.EntityModel));

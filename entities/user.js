@@ -22,9 +22,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var models_1 = require("models");
+var models_1 = require("../models");
 var typeorm_1 = require("typeorm");
-var entities_1 = require("entities");
+var _1 = require(".");
 var UserEntity = (function (_super) {
     __extends(UserEntity, _super);
     function UserEntity() {
@@ -46,16 +46,16 @@ var UserEntity = (function (_super) {
         __metadata("design:type", String)
     ], UserEntity.prototype, "name", void 0);
     __decorate([
-        typeorm_1.OneToMany(function () { return entities_1.OrderEntity; }, function (orders) { return orders.user; }),
+        typeorm_1.OneToMany(function () { return _1.OrderEntity; }, function (orders) { return orders.user; }),
         __metadata("design:type", Array)
     ], UserEntity.prototype, "orders", void 0);
     __decorate([
-        typeorm_1.OneToMany(function () { return entities_1.UserRoleEntity; }, function (roles) { return roles.user; }),
+        typeorm_1.OneToMany(function () { return _1.UserRoleEntity; }, function (roles) { return roles.user; }),
         __metadata("design:type", Array)
     ], UserEntity.prototype, "roles", void 0);
     __decorate([
-        typeorm_1.OneToOne(function () { return entities_1.UserAccountEntity; }, function (account) { return account.user; }),
-        __metadata("design:type", entities_1.UserAccountEntity)
+        typeorm_1.OneToOne(function () { return _1.UserAccountEntity; }, function (account) { return account.user; }),
+        __metadata("design:type", _1.UserAccountEntity)
     ], UserEntity.prototype, "account", void 0);
     return UserEntity;
 }(models_1.EntityModel));

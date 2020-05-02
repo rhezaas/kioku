@@ -22,10 +22,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var models_1 = require("models");
+var models_1 = require("../models");
 var typeorm_1 = require("typeorm");
-var user_1 = require("./user");
-var order_item_1 = require("./order.item");
+var _1 = require(".");
 var OrderEntity = (function (_super) {
     __extends(OrderEntity, _super);
     function OrderEntity() {
@@ -60,14 +59,14 @@ var OrderEntity = (function (_super) {
         __metadata("design:type", Date)
     ], OrderEntity.prototype, "cancelled_at", void 0);
     __decorate([
-        typeorm_1.ManyToOne(function () { return user_1.UserEntity; }, function (user) { return user.orders; }),
+        typeorm_1.ManyToOne(function () { return _1.UserEntity; }, function (user) { return user.orders; }),
         typeorm_1.JoinColumn({
             name: 'user_id'
         }),
-        __metadata("design:type", user_1.UserEntity)
+        __metadata("design:type", _1.UserEntity)
     ], OrderEntity.prototype, "user", void 0);
     __decorate([
-        typeorm_1.OneToMany(function () { return order_item_1.OrderItemEntity; }, function (orderItems) { return orderItems.order; }),
+        typeorm_1.OneToMany(function () { return _1.OrderItemEntity; }, function (orderItems) { return orderItems.order; }),
         __metadata("design:type", Array)
     ], OrderEntity.prototype, "orderItems", void 0);
     return OrderEntity;

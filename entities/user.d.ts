@@ -1,6 +1,6 @@
-import { EntityModel } from 'models';
-import { UserInterface } from 'interfaces';
-import { OrderEntity, UserRoleEntity, UserAccountEntity } from 'entities';
+import { EntityModel } from '../models';
+import { UserInterface } from '../interfaces';
+import { OrderEntity, UserRoleEntity, UserAccountEntity } from '.';
 export declare class UserEntity extends EntityModel implements UserInterface {
     static entity: {
         schema: string;

@@ -1,6 +1,6 @@
-import { EntityModel } from 'models';
-import { CategoryInterface } from 'interfaces';
-import { ItemEntity } from 'entities';
+import { EntityModel } from '../models';
+import { CategoryInterface } from '../interfaces';
+import { ItemEntity } from '.';
 export declare class CategoryEntity extends EntityModel implements CategoryInterface {
     static entity: {
         schema: string;
