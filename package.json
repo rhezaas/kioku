@@ -1,0 +1,22 @@
+{
+  "name": "kioku",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "NODE_PATH=./src/ ts-node src/index.ts",
+    "compile": "./scripts/cleaner && tsc"
+  },
+  "author": "rheza.as",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "pg": "^8.0.3",
+    "typeorm": "^0.2.24"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.4",
+    "ts-node": "^8.9.1",
+    "typescript": "^3.8.3"
+  }
+}

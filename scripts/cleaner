@@ -1,0 +1,10 @@
+#!/bin/bash
+
+rm -rf entities
+rm -rf interfaces
+rm -rf models
+rm -rf tools
+rm -rf database.js
+rm -rf database.d.ts 
+rm -rf index.js
+rm -rf index.d.ts
