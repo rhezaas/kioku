@@ -1,5 +1,4 @@
 export { UserInterface } from './user'
-export { UserRoleInterface } from './user.role'
 export { UserAccountInterface } from './user.account'
 
 export { OrderInterface } from './order'

@@ -63,6 +63,9 @@ var ItemEntity = (function (_super) {
     ], ItemEntity.prototype, "itemOrders", void 0);
     __decorate([
         typeorm_1.ManyToOne(function () { return _1.CategoryEntity; }, function (category) { return category.items; }),
+        typeorm_1.JoinColumn({
+            name: 'category_id'
+        }),
         __metadata("design:type", _1.CategoryEntity)
     ], ItemEntity.prototype, "category", void 0);
     return ItemEntity;

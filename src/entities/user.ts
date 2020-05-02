@@ -10,9 +10,12 @@ import {
 
 import {
     OrderEntity,
-    UserRoleEntity,
     UserAccountEntity
 } from '.'
+
+import {
+    USER_ROLE,
+} from '../tools'
 
 export class UserEntity extends EntityModel implements UserInterface {
     public static entity = {
@@ -29,12 +32,15 @@ export class UserEntity extends EntityModel implements UserInterface {
     })
     name: string
 
+    @Column({
+        type: 'enum',
+        enum: Object.keys(USER_ROLE)
+    })
+    role: USER_ROLE
+
     // Relations
     @OneToMany(() => OrderEntity, orders => orders.user)
     orders: OrderEntity[]
-
-    @OneToMany(() => UserRoleEntity, roles => roles.user)
-    roles: UserRoleEntity[]
     
     @OneToOne(() => UserAccountEntity, account => account.user)
     account: UserAccountEntity

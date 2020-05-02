@@ -8,5 +8,6 @@ export declare class UserAccountEntity extends EntityModel implements UserAccoun
     };
     user_id: number;
     password: string;
+    token: string;
     user: UserEntity;
 }

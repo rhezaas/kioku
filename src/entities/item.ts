@@ -6,6 +6,7 @@ import {
     PrimaryGeneratedColumn,
     OneToMany,
     ManyToOne,
+    JoinColumn,
 } from 'typeorm'
 
 import {
@@ -43,6 +44,9 @@ export class ItemEntity extends EntityModel implements ItemInterface {
     itemOrders: OrderItemEntity[]
 
     @ManyToOne(() => CategoryEntity, category => category.items)
+    @JoinColumn({
+        name: 'category_id'
+    })
     category: CategoryEntity
 
 }

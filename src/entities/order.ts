@@ -13,7 +13,11 @@ import {
 import {
     UserEntity,
     OrderItemEntity
-} from "."
+} from '.'
+
+import {
+    ORDER_STATUS
+} from '../tools'
 
 export class OrderEntity extends EntityModel implements OrderInterface {
     public static entity = {
@@ -37,7 +41,15 @@ export class OrderEntity extends EntityModel implements OrderInterface {
     })
     total: number
 
-    @Column()
+    @Column({
+        type: 'enum',
+        enum: Object.keys(ORDER_STATUS)
+    })
+    status: ORDER_STATUS
+
+    @Column({
+        nullable: true
+    })
     cancelled_at: Date
 
     // Relations

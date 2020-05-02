@@ -25,6 +25,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var models_1 = require("../models");
 var typeorm_1 = require("typeorm");
 var _1 = require(".");
+var tools_1 = require("../tools");
 var UserEntity = (function (_super) {
     __extends(UserEntity, _super);
     function UserEntity() {
@@ -46,13 +47,16 @@ var UserEntity = (function (_super) {
         __metadata("design:type", String)
     ], UserEntity.prototype, "name", void 0);
     __decorate([
+        typeorm_1.Column({
+            type: 'enum',
+            enum: Object.keys(tools_1.USER_ROLE)
+        }),
+        __metadata("design:type", String)
+    ], UserEntity.prototype, "role", void 0);
+    __decorate([
         typeorm_1.OneToMany(function () { return _1.OrderEntity; }, function (orders) { return orders.user; }),
         __metadata("design:type", Array)
     ], UserEntity.prototype, "orders", void 0);
-    __decorate([
-        typeorm_1.OneToMany(function () { return _1.UserRoleEntity; }, function (roles) { return roles.user; }),
-        __metadata("design:type", Array)
-    ], UserEntity.prototype, "roles", void 0);
     __decorate([
         typeorm_1.OneToOne(function () { return _1.UserAccountEntity; }, function (account) { return account.user; }),
         __metadata("design:type", _1.UserAccountEntity)

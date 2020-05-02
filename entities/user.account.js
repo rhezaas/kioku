@@ -46,6 +46,13 @@ var UserAccountEntity = (function (_super) {
         __metadata("design:type", String)
     ], UserAccountEntity.prototype, "password", void 0);
     __decorate([
+        typeorm_1.Column({
+            type: 'varchar',
+            length: 512
+        }),
+        __metadata("design:type", String)
+    ], UserAccountEntity.prototype, "token", void 0);
+    __decorate([
         typeorm_1.OneToOne(function () { return _1.UserEntity; }, function (user) { return user.account; }),
         typeorm_1.JoinColumn({
             name: 'user_id'

@@ -27,6 +27,12 @@ export class UserAccountEntity extends EntityModel implements UserAccountInterfa
     })
     password: string
 
+    @Column({
+        type: 'varchar',
+        length: 512
+    })
+    token: string
+
     // Relations
     @OneToOne(() => UserEntity, user => user.account)
     @JoinColumn({

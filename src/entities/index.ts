@@ -1,5 +1,4 @@
 export { UserEntity } from './user'
-export { UserRoleEntity } from './user.role'
 export { UserAccountEntity } from './user.account'
 
 export { OrderEntity } from './order'
