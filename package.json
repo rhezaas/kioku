@@ -3,6 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
+  "files": [
+		"entities/**/*",
+    "interfaces/**/*",
+    "models/**/*",
+    "tools/**/*",
+    "database.js",
+    "database.d.ts",
+		"index.js",
+		"index.d.ts"
+	],
   "scripts": {
     "start": "NODE_PATH=./src/ ts-node src/index.ts",
     "compile": "./scripts/cleaner && tsc"
