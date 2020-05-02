@@ -7,9 +7,8 @@ export class Database {
     constructor() {
         if(process.env.PG_INIT === 'true') {
             this.initialize()
+            this.synchronize()
         }
-
-        this.synchronize()
     }
 
     private async config(entities?: any[]) {

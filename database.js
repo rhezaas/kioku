@@ -43,8 +43,8 @@ var Database = (function () {
     function Database() {
         if (process.env.PG_INIT === 'true') {
             this.initialize();
+            this.synchronize();
         }
-        this.synchronize();
     }
     Database.prototype.config = function (entities) {
         return __awaiter(this, void 0, void 0, function () {
