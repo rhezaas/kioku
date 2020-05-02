@@ -1,5 +1,5 @@
-import { EntityModel } from 'models'
-import { CategoryInterface } from 'interfaces'
+import { EntityModel } from '../models'
+import { CategoryInterface } from '../interfaces'
 
 import {
     Column,
@@ -7,7 +7,7 @@ import {
     OneToMany,
 } from 'typeorm'
 
-import { ItemEntity } from 'entities'
+import { ItemEntity } from '.'
 
 export class CategoryEntity extends EntityModel implements CategoryInterface {
     public static entity = {

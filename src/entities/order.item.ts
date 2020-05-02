@@ -1,5 +1,5 @@
-import { EntityModel } from 'models'
-import { OrderItemInterface } from 'interfaces'
+import { EntityModel } from '../models'
+import { OrderItemInterface } from '../interfaces'
 
 import {
     ManyToOne,
@@ -10,7 +10,7 @@ import {
 import {
     OrderEntity,
     ItemEntity
-} from 'entities'
+} from '.'
 
 export class OrderItemEntity extends EntityModel implements OrderItemInterface {
     public static entity = {

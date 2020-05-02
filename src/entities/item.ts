@@ -1,5 +1,5 @@
-import { EntityModel } from 'models'
-import { ItemInterface } from 'interfaces'
+import { EntityModel } from '../models'
+import { ItemInterface } from '../interfaces'
 
 import {
     Column,
@@ -11,7 +11,7 @@ import {
 import {
     OrderItemEntity,
     CategoryEntity
-} from 'entities'
+} from '.'
 
 export class ItemEntity extends EntityModel implements ItemInterface {
     public static entity = {

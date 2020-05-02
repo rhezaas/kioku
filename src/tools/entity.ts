@@ -1,4 +1,4 @@
-import { EntityModel } from 'models'
+import { EntityModel } from '../models'
 import { Entity } from 'typeorm'
 
 export class EntityTools {

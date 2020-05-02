@@ -1,5 +1,5 @@
-import { EntityModel } from 'models'
-import { UserRoleInterface } from 'interfaces'
+import { EntityModel } from '../models'
+import { UserRoleInterface } from '../interfaces'
 
 import {
     Column,
@@ -8,7 +8,7 @@ import {
     PrimaryColumn
 } from 'typeorm'
 
-import { UserEntity } from 'entities'
+import { UserEntity } from '.'
 
 export class UserRoleEntity extends EntityModel implements UserRoleInterface {
     public static entity = {

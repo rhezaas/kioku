@@ -1,5 +1,5 @@
-import { EntityModel } from 'models'
-import { OrderInterface } from 'interfaces'
+import { EntityModel } from '../models'
+import { OrderInterface } from '../interfaces'
 
 import {
     PrimaryGeneratedColumn,
@@ -10,8 +10,10 @@ import {
     OneToMany,
 } from 'typeorm'
 
-import { UserEntity } from "./user"
-import { OrderItemEntity } from './order.item'
+import {
+    UserEntity,
+    OrderItemEntity
+} from "."
 
 export class OrderEntity extends EntityModel implements OrderInterface {
     public static entity = {

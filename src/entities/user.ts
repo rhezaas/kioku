@@ -1,5 +1,5 @@
-import { EntityModel } from 'models'
-import { UserInterface } from 'interfaces'
+import { EntityModel } from '../models'
+import { UserInterface } from '../interfaces'
 
 import {
     PrimaryGeneratedColumn,
@@ -12,7 +12,7 @@ import {
     OrderEntity,
     UserRoleEntity,
     UserAccountEntity
-} from 'entities'
+} from '.'
 
 export class UserEntity extends EntityModel implements UserInterface {
     public static entity = {

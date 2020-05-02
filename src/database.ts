@@ -1,7 +1,7 @@
-import * as Entities from 'entities'
+import * as Entities from './entities'
 
 import { createConnection } from 'typeorm'
-import { EntityTools } from 'tools'
+import { EntityTools } from './tools'
 
 export class Database {
     constructor() {

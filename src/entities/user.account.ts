@@ -1,5 +1,5 @@
-import { EntityModel } from 'models'
-import { UserAccountInterface } from 'interfaces'
+import { EntityModel } from '../models'
+import { UserAccountInterface } from '../interfaces'
 
 import {
     Column,
@@ -10,7 +10,7 @@ import {
 
 import {
     UserEntity
-} from 'entities'
+} from '.'
 
 export class UserAccountEntity extends EntityModel implements UserAccountInterface {
     public static entity = {
