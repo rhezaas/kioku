@@ -41,7 +41,9 @@ var typeorm_1 = require("typeorm");
 var tools_1 = require("./tools");
 var Database = (function () {
     function Database() {
-        this.initialize();
+        if (process.env.PG_INIT === 'true') {
+            this.initialize();
+        }
         this.synchronize();
     }
     Database.prototype.config = function (entities) {
@@ -55,7 +57,7 @@ var Database = (function () {
                         username: process.env.PG_USER,
                         password: process.env.PG_PASS,
                         entities: entities ? entities : [],
-                        logging: true,
+                        logging: process.env.PG_DEBUG === 'true',
                         synchronize: true
                     })];
             });

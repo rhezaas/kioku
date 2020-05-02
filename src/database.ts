@@ -5,7 +5,10 @@ import { EntityTools } from './tools'
 
 export class Database {
     constructor() {
-        this.initialize()
+        if(process.env.PG_INIT === 'true') {
+            this.initialize()
+        }
+
         this.synchronize()
     }
 
@@ -18,7 +21,7 @@ export class Database {
             username: process.env.PG_USER,
             password: process.env.PG_PASS,
             entities: entities ? entities : [],
-            logging: true,
+            logging: process.env.PG_DEBUG === 'true',
             synchronize: true
         })
     }
