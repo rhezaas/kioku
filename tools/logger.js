@@ -29,7 +29,7 @@ var LoggerTools = (function () {
         for (var _i = 1; _i < arguments.length; _i++) {
             args[_i - 1] = arguments[_i];
         }
-        console.error.apply(console, __spreadArrays(["" + this.strong + this.color(196) + "%s1" + this.reset + this.strong + this.color(208) + "%s2" + this.reset, '[ ERROR! ]', "[ " + err_number + " ]"], args));
+        console.error.apply(console, __spreadArrays(["" + this.strong + this.color(196) + "%s" + this.reset + this.strong + this.color(208) + "%s" + this.reset, '[ ERROR! ]', "[ " + err_number + " ]"], args));
     };
     LoggerTools.strong = '\x1b[1m';
     LoggerTools.reset = '\x1b[0m';
