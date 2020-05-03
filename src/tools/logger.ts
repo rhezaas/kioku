@@ -8,7 +8,7 @@ export class LoggerTools{
     }
 
     public static warn(...args: any[]) {
-        console.warn(`${this.strong}${this.color(40)}%s${this.reset}`, `[ WARN!! ]`, ...args)
+        console.warn(`${this.strong}${this.color(208)}%s${this.reset}`, `[ WARN!! ]`, ...args)
     }
 
     public static error(err_number: number, ...args: any[]) {

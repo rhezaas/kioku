@@ -22,7 +22,7 @@ var LoggerTools = (function () {
         for (var _i = 0; _i < arguments.length; _i++) {
             args[_i] = arguments[_i];
         }
-        console.warn.apply(console, __spreadArrays(["" + this.strong + this.color(40) + "%s" + this.reset, "[ WARN!! ]"], args));
+        console.warn.apply(console, __spreadArrays(["" + this.strong + this.color(208) + "%s" + this.reset, "[ WARN!! ]"], args));
     };
     LoggerTools.error = function (err_number) {
         var args = [];
