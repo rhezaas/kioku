@@ -10,12 +10,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var LoggerTools = (function () {
     function LoggerTools() {
     }
-    LoggerTools.log = function (name) {
+    LoggerTools.log = function (name, color) {
         var args = [];
-        for (var _i = 1; _i < arguments.length; _i++) {
-            args[_i - 1] = arguments[_i];
+        for (var _i = 2; _i < arguments.length; _i++) {
+            args[_i - 2] = arguments[_i];
         }
-        console.log.apply(console, __spreadArrays(["" + this.strong + this.color(51) + "%s" + this.reset, "[ " + (name !== null && name !== void 0 ? name : 'LOGGER') + " ]"], args));
+        console.log.apply(console, __spreadArrays(["" + this.strong + this.color(color !== null && color !== void 0 ? color : 51) + "%s" + this.reset, "[ " + (name !== null && name !== void 0 ? name : 'LOGGER') + " ]"], args));
     };
     LoggerTools.warn = function () {
         var args = [];

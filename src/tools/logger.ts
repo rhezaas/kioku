@@ -3,8 +3,8 @@ export class LoggerTools{
     private static reset: string = '\x1b[0m'
     private static color = (code: number): string => `\x1b[38;5;${code}m`
 
-    public static log(name?: string, ...args: any[]) {
-        console.log(`${this.strong}${this.color(51)}%s${this.reset}`, `[ ${name??'LOGGER'} ]`, ...args)
+    public static log(name?: string, color?: number, ...args: any[]) {
+        console.log(`${this.strong}${this.color(color??51)}%s${this.reset}`, `[ ${name??'LOGGER'} ]`, ...args)
     }
 
     public static warn(...args: any[]) {

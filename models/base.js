@@ -9,14 +9,14 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var tools_1 = require("../tools");
 var BaseModel = (function () {
-    function BaseModel(name) {
+    function BaseModel(name, number) {
         var _this = this;
         this.log = function () {
             var args = [];
             for (var _i = 0; _i < arguments.length; _i++) {
                 args[_i] = arguments[_i];
             }
-            return tools_1.LoggerTools.log.apply(tools_1.LoggerTools, __spreadArrays([_this.__name], args));
+            return tools_1.LoggerTools.log.apply(tools_1.LoggerTools, __spreadArrays([_this.__name, _this.__color], args));
         };
         this.warn = function () {
             var args = [];
@@ -33,6 +33,7 @@ var BaseModel = (function () {
             return tools_1.LoggerTools.error.apply(tools_1.LoggerTools, __spreadArrays([err_number], args));
         };
         this.__name = name.toUpperCase();
+        this.__color = number;
     }
     return BaseModel;
 }());
