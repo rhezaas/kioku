@@ -1,2 +1,2 @@
 export { EntityTools } from './entity'
-export * from './enum'
+export { LoggerTools } from './logger'

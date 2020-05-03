@@ -17,7 +17,7 @@ import {
 
 import {
     ORDER_STATUS
-} from '../tools'
+} from '../enum'
 
 export class OrderEntity extends EntityModel implements OrderInterface {
     public static entity = {

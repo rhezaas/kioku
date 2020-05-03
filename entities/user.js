@@ -25,7 +25,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var models_1 = require("../models");
 var typeorm_1 = require("typeorm");
 var _1 = require(".");
-var tools_1 = require("../tools");
+var enum_1 = require("../enum");
 var UserEntity = (function (_super) {
     __extends(UserEntity, _super);
     function UserEntity() {
@@ -49,7 +49,7 @@ var UserEntity = (function (_super) {
     __decorate([
         typeorm_1.Column({
             type: 'enum',
-            enum: Object.keys(tools_1.USER_ROLE)
+            enum: Object.keys(enum_1.USER_ROLE)
         }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "role", void 0);

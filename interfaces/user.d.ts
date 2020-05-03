@@ -1,4 +1,4 @@
-import { USER_ROLE } from '../tools';
+import { USER_ROLE } from '../enum';
 export interface UserInterface {
     id: number;
     name: string;

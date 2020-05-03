@@ -1,7 +1,7 @@
 import { EntityModel } from '../models';
 import { OrderInterface } from '../interfaces';
 import { UserEntity, OrderItemEntity } from '.';
-import { ORDER_STATUS } from '../tools';
+import { ORDER_STATUS } from '../enum';
 export declare class OrderEntity extends EntityModel implements OrderInterface {
     static entity: {
         schema: string;

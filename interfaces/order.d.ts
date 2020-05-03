@@ -1,4 +1,4 @@
-import { ORDER_STATUS } from '../tools';
+import { ORDER_STATUS } from '../enum';
 export interface OrderInterface {
     id: number;
     created_at: Date;

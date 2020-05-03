@@ -8,6 +8,8 @@
     "interfaces/**/*",
     "models/**/*",
     "tools/**/*",
+    "enum.js",
+    "enum.d.ts",
     "database.js",
     "database.d.ts",
 		"index.js",

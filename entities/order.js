@@ -25,7 +25,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var models_1 = require("../models");
 var typeorm_1 = require("typeorm");
 var _1 = require(".");
-var tools_1 = require("../tools");
+var enum_1 = require("../enum");
 var OrderEntity = (function (_super) {
     __extends(OrderEntity, _super);
     function OrderEntity() {
@@ -58,7 +58,7 @@ var OrderEntity = (function (_super) {
     __decorate([
         typeorm_1.Column({
             type: 'enum',
-            enum: Object.keys(tools_1.ORDER_STATUS)
+            enum: Object.keys(enum_1.ORDER_STATUS)
         }),
         __metadata("design:type", String)
     ], OrderEntity.prototype, "status", void 0);

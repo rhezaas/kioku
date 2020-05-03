@@ -15,7 +15,7 @@ import {
 
 import {
     USER_ROLE,
-} from '../tools'
+} from '../enum'
 
 export class UserEntity extends EntityModel implements UserInterface {
     public static entity = {
