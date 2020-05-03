@@ -32,7 +32,7 @@ var BaseModel = (function () {
             }
             return tools_1.LoggerTools.error.apply(tools_1.LoggerTools, __spreadArrays([err_number], args));
         };
-        this.__name = name === null || name === void 0 ? void 0 : name.toUpperCase();
+        this.__name = name ? name.toUpperCase() : undefined;
         this.__color = number !== null && number !== void 0 ? number : undefined;
     }
     return BaseModel;

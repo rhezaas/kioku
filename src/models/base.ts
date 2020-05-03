@@ -5,7 +5,7 @@ export abstract class BaseModel {
     protected __color: number
 
     constructor(name?: string, number?: number) {
-        this.__name = name?.toUpperCase()
+        this.__name = name ? name.toUpperCase() : undefined
         this.__color = number??undefined
     }
 
