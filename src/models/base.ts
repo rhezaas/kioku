@@ -5,8 +5,8 @@ export abstract class BaseModel {
     protected __color: number
 
     constructor(name?: string, number?: number) {
-        this.__name = name.toUpperCase()
-        this.__color = number
+        this.__name = name?.toUpperCase()
+        this.__color = number??undefined
     }
 
     protected log = (...args: any[]) => LoggerTools.log(this.__name, this.__color, ...args)
