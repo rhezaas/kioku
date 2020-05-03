@@ -12,7 +12,7 @@ export class LoggerTools{
     }
 
     public static error(err_number: number, ...args: any[]) {
-        console.error(`${this.strong}${this.color(196)}%s1${this.reset}${this.strong}${this.color(208)}%s2${this.reset}`, '[ ERROR! ]', `[ ${err_number} ]`, ...args)
+        console.error(`${this.strong}${this.color(196)}%s${this.reset}${this.strong}${this.color(208)}%s${this.reset}`, '[ ERROR! ]', `[ ${err_number} ]`, ...args)
     }
     
 }
