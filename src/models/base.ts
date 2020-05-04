@@ -9,7 +9,7 @@ export abstract class BaseModel {
         this.__color = number??undefined
     }
 
-    protected log = (...args: any[]) => LoggerTools.log(this.__name, this.__color, ...args)
-    protected warn = (...args: any[]) => LoggerTools.warn(...args)
-    protected error = (err_number: number, ...args: any[]) => LoggerTools.error(err_number, ...args)
+    protected log(...args: any[]){ LoggerTools.log(this.__name, this.__color, ...args) }
+    protected warn(...args: any[]){ LoggerTools.warn(...args) }
+    protected error(err_number: number, ...args: any[]){ LoggerTools.error(err_number, ...args) }
 }

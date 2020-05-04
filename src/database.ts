@@ -25,7 +25,7 @@ export class Database {
         })
     }
 
-    async initialize() {
+    public async initialize() {
         return this.config()
         .then(async connection => {
             const qr = connection.createQueryRunner()
@@ -40,7 +40,7 @@ export class Database {
         })
     }
 
-    async synchronize() {
+    public async synchronize() {
         return this.config(Object.values(Entities).map(value => EntityTools.create(value)))
     }
 }

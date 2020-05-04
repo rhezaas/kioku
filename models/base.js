@@ -10,31 +10,30 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var tools_1 = require("../tools");
 var BaseModel = (function () {
     function BaseModel(name, number) {
-        var _this = this;
-        this.log = function () {
-            var args = [];
-            for (var _i = 0; _i < arguments.length; _i++) {
-                args[_i] = arguments[_i];
-            }
-            return tools_1.LoggerTools.log.apply(tools_1.LoggerTools, __spreadArrays([_this.__name, _this.__color], args));
-        };
-        this.warn = function () {
-            var args = [];
-            for (var _i = 0; _i < arguments.length; _i++) {
-                args[_i] = arguments[_i];
-            }
-            return tools_1.LoggerTools.warn.apply(tools_1.LoggerTools, args);
-        };
-        this.error = function (err_number) {
-            var args = [];
-            for (var _i = 1; _i < arguments.length; _i++) {
-                args[_i - 1] = arguments[_i];
-            }
-            return tools_1.LoggerTools.error.apply(tools_1.LoggerTools, __spreadArrays([err_number], args));
-        };
         this.__name = name !== null && name !== void 0 ? name : undefined;
         this.__color = number !== null && number !== void 0 ? number : undefined;
     }
+    BaseModel.prototype.log = function () {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        tools_1.LoggerTools.log.apply(tools_1.LoggerTools, __spreadArrays([this.__name, this.__color], args));
+    };
+    BaseModel.prototype.warn = function () {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        tools_1.LoggerTools.warn.apply(tools_1.LoggerTools, args);
+    };
+    BaseModel.prototype.error = function (err_number) {
+        var args = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            args[_i - 1] = arguments[_i];
+        }
+        tools_1.LoggerTools.error.apply(tools_1.LoggerTools, __spreadArrays([err_number], args));
+    };
     return BaseModel;
 }());
 exports.BaseModel = BaseModel;
