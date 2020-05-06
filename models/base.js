@@ -11,10 +11,6 @@ var tools_1 = require("../tools");
 var BaseModel = (function () {
     function BaseModel() {
     }
-    BaseModel.prototype.specializeLoggerName = function (__name, __color) {
-        this.name = __name;
-        this.color = __color;
-    };
     BaseModel.prototype.log = function () {
         var args = [];
         for (var _i = 0; _i < arguments.length; _i++) {
