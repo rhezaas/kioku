@@ -4,6 +4,7 @@ export abstract class BaseModel {
     protected __name: string
     protected __color: number
 
+    constructor()
     constructor(name?: string, number?: number) {
         this.__name = name??undefined
         this.__color = number??undefined
