@@ -1,7 +1,7 @@
 export declare abstract class BaseModel {
-    protected __name: string;
-    protected __color: number;
-    constructor();
+    protected name: string;
+    protected color: number;
+    protected specializeLoggerName(__name: string, __color: number): void;
     protected log(...args: any[]): void;
     protected warn(...args: any[]): void;
     protected error(err_number: number, ...args: any[]): void;

@@ -9,16 +9,18 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var tools_1 = require("../tools");
 var BaseModel = (function () {
-    function BaseModel(name, number) {
-        this.__name = name !== null && name !== void 0 ? name : undefined;
-        this.__color = number !== null && number !== void 0 ? number : undefined;
+    function BaseModel() {
     }
+    BaseModel.prototype.specializeLoggerName = function (__name, __color) {
+        this.name = __name;
+        this.color = __color;
+    };
     BaseModel.prototype.log = function () {
         var args = [];
         for (var _i = 0; _i < arguments.length; _i++) {
             args[_i] = arguments[_i];
         }
-        tools_1.LoggerTools.log.apply(tools_1.LoggerTools, __spreadArrays([this.__name, this.__color], args));
+        tools_1.LoggerTools.log.apply(tools_1.LoggerTools, __spreadArrays([this.name, this.color], args));
     };
     BaseModel.prototype.warn = function () {
         var args = [];
