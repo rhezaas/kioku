@@ -7,33 +7,40 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
     return r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var LoggerTools = (function () {
-    function LoggerTools() {
+var System = (function () {
+    function System() {
     }
-    LoggerTools.log = function (name, color) {
+    System.print = function () {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        console.log.apply(console, __spreadArrays(["" + this.strong + this.color(51) + "%s" + this.reset, "[ LOGGER ]"], args));
+    };
+    System.specializeLog = function (name, color) {
         var args = [];
         for (var _i = 2; _i < arguments.length; _i++) {
             args[_i - 2] = arguments[_i];
         }
-        console.log.apply(console, __spreadArrays(["" + this.strong + this.color(color !== null && color !== void 0 ? color : 51) + "%s" + this.reset, "[ " + (name !== null && name !== void 0 ? name : 'LOGGER') + " ]"], args));
+        console.log.apply(console, __spreadArrays(["" + this.strong + this.color(color) + "%s" + this.reset, "[ " + name + " ]"], args));
     };
-    LoggerTools.warn = function () {
+    System.warn = function () {
         var args = [];
         for (var _i = 0; _i < arguments.length; _i++) {
             args[_i] = arguments[_i];
         }
         console.warn.apply(console, __spreadArrays(["" + this.strong + this.color(208) + "%s" + this.reset, "[ WARN!! ]"], args));
     };
-    LoggerTools.error = function (err_number) {
+    System.error = function (err_number) {
         var args = [];
         for (var _i = 1; _i < arguments.length; _i++) {
             args[_i - 1] = arguments[_i];
         }
         console.error.apply(console, __spreadArrays(["" + this.strong + this.color(196) + "%s" + this.reset + this.strong + this.color(208) + "%s" + this.reset, '[ ERROR! ]', "[ " + err_number + " ]"], args));
     };
-    LoggerTools.strong = '\x1b[1m';
-    LoggerTools.reset = '\x1b[0m';
-    LoggerTools.color = function (code) { return "\u001B[38;5;" + code + "m"; };
-    return LoggerTools;
+    System.strong = '\x1b[1m';
+    System.reset = '\x1b[0m';
+    System.color = function (code) { return "\u001B[38;5;" + code + "m"; };
+    return System;
 }());
-exports.LoggerTools = LoggerTools;
+exports.System = System;
