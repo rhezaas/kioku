@@ -17,7 +17,8 @@
 	],
   "scripts": {
     "start": "NODE_PATH=./src/ ts-node src/index.ts",
-    "compile": "./scripts/cleaner && tsc"
+    "compile": "./scripts/cleaner && tsc",
+    "porting": "oc port-forward postgresql-1-glbxj 15432:5432"
   },
   "author": "rheza.as",
   "license": "ISC",
