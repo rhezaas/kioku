@@ -5,12 +5,10 @@ import {
     PrimaryGeneratedColumn,
     Column,
     OneToMany,
-    OneToOne
 } from 'typeorm'
 
 import {
     OrderEntity,
-    UserAccountEntity
 } from '.'
 
 import {
@@ -33,6 +31,20 @@ export class UserEntity extends EntityModel implements UserInterface {
     name: string
 
     @Column({
+        type: 'varchar',
+        length: 512,
+        nullable: true,
+    })
+    password: string
+
+    @Column({
+        type: 'varchar',
+        length: 512,
+        nullable: false,
+    })
+    token: string
+
+    @Column({
         type: 'enum',
         enum: Object.keys(ROLES)
     })
@@ -41,7 +53,4 @@ export class UserEntity extends EntityModel implements UserInterface {
     // Relations
     @OneToMany(() => OrderEntity, orders => orders.user)
     orders: OrderEntity[]
-    
-    @OneToOne(() => UserAccountEntity, account => account.user)
-    account: UserAccountEntity
 }

@@ -48,6 +48,22 @@ var UserEntity = (function (_super) {
     ], UserEntity.prototype, "name", void 0);
     __decorate([
         typeorm_1.Column({
+            type: 'varchar',
+            length: 512,
+            nullable: true,
+        }),
+        __metadata("design:type", String)
+    ], UserEntity.prototype, "password", void 0);
+    __decorate([
+        typeorm_1.Column({
+            type: 'varchar',
+            length: 512,
+            nullable: false,
+        }),
+        __metadata("design:type", String)
+    ], UserEntity.prototype, "token", void 0);
+    __decorate([
+        typeorm_1.Column({
             type: 'enum',
             enum: Object.keys(enum_1.ROLES)
         }),
@@ -57,10 +73,6 @@ var UserEntity = (function (_super) {
         typeorm_1.OneToMany(function () { return _1.OrderEntity; }, function (orders) { return orders.user; }),
         __metadata("design:type", Array)
     ], UserEntity.prototype, "orders", void 0);
-    __decorate([
-        typeorm_1.OneToOne(function () { return _1.UserAccountEntity; }, function (account) { return account.user; }),
-        __metadata("design:type", _1.UserAccountEntity)
-    ], UserEntity.prototype, "account", void 0);
     return UserEntity;
 }(models_1.EntityModel));
 exports.UserEntity = UserEntity;
