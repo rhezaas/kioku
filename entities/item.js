@@ -53,6 +53,13 @@ var ItemEntity = (function (_super) {
     ], ItemEntity.prototype, "name", void 0);
     __decorate([
         typeorm_1.Column({
+            type: 'text',
+            nullable: false
+        }),
+        __metadata("design:type", String)
+    ], ItemEntity.prototype, "description", void 0);
+    __decorate([
+        typeorm_1.Column({
             nullable: false
         }),
         __metadata("design:type", Number)

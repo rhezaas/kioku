@@ -40,6 +40,12 @@ var CategoryEntity = (function (_super) {
     ], CategoryEntity.prototype, "id", void 0);
     __decorate([
         typeorm_1.Column({
+            nullable: true
+        }),
+        __metadata("design:type", Number)
+    ], CategoryEntity.prototype, "category_id", void 0);
+    __decorate([
+        typeorm_1.Column({
             nullable: false
         }),
         __metadata("design:type", String)
@@ -48,6 +54,17 @@ var CategoryEntity = (function (_super) {
         typeorm_1.OneToMany(function () { return _1.ItemEntity; }, function (items) { return items.category; }),
         __metadata("design:type", Array)
     ], CategoryEntity.prototype, "items", void 0);
+    __decorate([
+        typeorm_1.OneToMany(function () { return CategoryEntity; }, function (category) { return category.category_ids; }),
+        __metadata("design:type", Array)
+    ], CategoryEntity.prototype, "category", void 0);
+    __decorate([
+        typeorm_1.ManyToOne(function () { return CategoryEntity; }, function (category_ids) { return category_ids.category; }),
+        typeorm_1.JoinColumn({
+            name: 'category_id'
+        }),
+        __metadata("design:type", CategoryEntity)
+    ], CategoryEntity.prototype, "category_ids", void 0);
     return CategoryEntity;
 }(models_1.EntityModel));
 exports.CategoryEntity = CategoryEntity;

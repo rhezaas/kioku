@@ -1,8 +1,10 @@
 export enum ORDER_STATUS {
     PENDING = 'PENDING',
+    CHECKOUT = 'CHECKOUT',
     PAID = 'PAID',
     QUEUE = 'QUEUE',
     PROCESSING = 'PROCESSING',
+    READY = 'READY',
     RESOLVED = 'RESOLVED'
 }
 
@@ -11,7 +13,7 @@ export enum PAYMENT_STATUS {
     FAILED = 'FAILED'
 }
 
-export enum USER_ROLE {
+export enum ROLES {
     SUPERADMIN = 'SUPERADMIN',
     ADMIN = 'ADMIN',
     TABLE = 'TABLE'

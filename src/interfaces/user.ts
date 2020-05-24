@@ -1,7 +1,7 @@
-import { USER_ROLE } from '../enum'
+import { ROLES } from '../enum'
 
 export interface UserInterface {
     id: number,
     name: string,
-    role: USER_ROLE
+    role: ROLES
 }

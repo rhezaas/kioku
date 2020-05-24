@@ -35,6 +35,12 @@ export class ItemEntity extends EntityModel implements ItemInterface {
     name: string
 
     @Column({
+        type: 'text',
+        nullable: false
+    })
+    description: string
+
+    @Column({
         nullable: false
     })
     price: number

@@ -14,7 +14,7 @@ import {
 } from '.'
 
 import {
-    USER_ROLE,
+    ROLES,
 } from '../enum'
 
 export class UserEntity extends EntityModel implements UserInterface {
@@ -34,9 +34,9 @@ export class UserEntity extends EntityModel implements UserInterface {
 
     @Column({
         type: 'enum',
-        enum: Object.keys(USER_ROLE)
+        enum: Object.keys(ROLES)
     })
-    role: USER_ROLE
+    role: ROLES
 
     // Relations
     @OneToMany(() => OrderEntity, orders => orders.user)

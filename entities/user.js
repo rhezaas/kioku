@@ -49,7 +49,7 @@ var UserEntity = (function (_super) {
     __decorate([
         typeorm_1.Column({
             type: 'enum',
-            enum: Object.keys(enum_1.USER_ROLE)
+            enum: Object.keys(enum_1.ROLES)
         }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "role", void 0);

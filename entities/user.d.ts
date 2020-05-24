@@ -1,7 +1,7 @@
 import { EntityModel } from '../models';
 import { UserInterface } from '../interfaces';
 import { OrderEntity, UserAccountEntity } from '.';
-import { USER_ROLE } from '../enum';
+import { ROLES } from '../enum';
 export declare class UserEntity extends EntityModel implements UserInterface {
     static entity: {
         schema: string;
@@ -9,7 +9,7 @@ export declare class UserEntity extends EntityModel implements UserInterface {
     };
     id: number;
     name: string;
-    role: USER_ROLE;
+    role: ROLES;
     orders: OrderEntity[];
     account: UserAccountEntity;
 }

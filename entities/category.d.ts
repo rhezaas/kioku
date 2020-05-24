@@ -7,6 +7,9 @@ export declare class CategoryEntity extends EntityModel implements CategoryInter
         name: string;
     };
     id: number;
+    category_id: number;
     name: string;
     items: ItemEntity[];
+    category: CategoryEntity[];
+    category_ids: CategoryEntity;
 }
