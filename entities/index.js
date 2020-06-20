@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var user_1 = require("./user");
-exports.UserEntity = user_1.UserEntity;
+Object.defineProperty(exports, "UserEntity", { enumerable: true, get: function () { return user_1.UserEntity; } });
 var order_1 = require("./order");
-exports.OrderEntity = order_1.OrderEntity;
+Object.defineProperty(exports, "OrderEntity", { enumerable: true, get: function () { return order_1.OrderEntity; } });
 var order_item_1 = require("./order.item");
-exports.OrderItemEntity = order_item_1.OrderItemEntity;
+Object.defineProperty(exports, "OrderItemEntity", { enumerable: true, get: function () { return order_item_1.OrderItemEntity; } });
 var item_1 = require("./item");
-exports.ItemEntity = item_1.ItemEntity;
+Object.defineProperty(exports, "ItemEntity", { enumerable: true, get: function () { return item_1.ItemEntity; } });
 var category_1 = require("./category");
-exports.CategoryEntity = category_1.CategoryEntity;
+Object.defineProperty(exports, "CategoryEntity", { enumerable: true, get: function () { return category_1.CategoryEntity; } });

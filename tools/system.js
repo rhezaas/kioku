@@ -7,6 +7,7 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
     return r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.System = void 0;
 var System = (function () {
     function System() {
     }
