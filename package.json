@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.ts",
   "files": [
-		"entities/**/*",
+    "entities/**/*",
     "interfaces/**/*",
     "models/**/*",
     "tools/**/*",
@@ -12,24 +12,24 @@
     "enum.d.ts",
     "database.js",
     "database.d.ts",
-		"index.js",
-		"index.d.ts"
-	],
+    "index.js",
+    "index.d.ts"
+  ],
   "scripts": {
     "start": "NODE_PATH=./src/ ts-node src/index.ts",
     "compile": "./scripts/cleaner && tsc",
-    "porting": "oc port-forward postgresql-1-glbxj 15432:5432"
+    "porting": "oc port-forward postgresql-96-centos7-1-f65x4 15432:5432"
   },
   "author": "rheza.as",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "pg": "^8.0.3",
-    "typeorm": "^0.2.24"
+    "pg": "^8.2.1",
+    "typeorm": "^0.2.25"
   },
   "devDependencies": {
-    "@types/node": "^13.13.4",
-    "ts-node": "^8.9.1",
-    "typescript": "^3.8.3"
+    "@types/node": "^13.13.12",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
   }
 }
