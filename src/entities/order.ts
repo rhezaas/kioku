@@ -43,7 +43,8 @@ export class OrderEntity extends EntityModel implements OrderInterface {
 
     @Column({
         type: 'enum',
-        enum: Object.keys(ORDER_STATUS)
+        enum: Object.keys(ORDER_STATUS),
+        default: ORDER_STATUS.PENDING
     })
     status: ORDER_STATUS
 
