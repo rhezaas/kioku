@@ -59,7 +59,8 @@ var OrderEntity = (function (_super) {
     __decorate([
         typeorm_1.Column({
             type: 'enum',
-            enum: Object.keys(enum_1.ORDER_STATUS)
+            enum: Object.keys(enum_1.ORDER_STATUS),
+            default: enum_1.ORDER_STATUS.PENDING
         }),
         __metadata("design:type", String)
     ], OrderEntity.prototype, "status", void 0);
