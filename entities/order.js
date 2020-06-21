@@ -52,7 +52,7 @@ var OrderEntity = (function (_super) {
     ], OrderEntity.prototype, "user_id", void 0);
     __decorate([
         typeorm_1.Column({
-            nullable: false
+            default: 0
         }),
         __metadata("design:type", Number)
     ], OrderEntity.prototype, "total", void 0);

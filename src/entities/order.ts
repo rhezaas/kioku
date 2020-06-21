@@ -37,7 +37,7 @@ export class OrderEntity extends EntityModel implements OrderInterface {
     user_id: number
 
     @Column({
-        nullable: false
+        default: 0
     })
     total: number
 
